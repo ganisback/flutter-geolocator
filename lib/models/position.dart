@@ -11,6 +11,7 @@ class Position {
     this.heading,
     this.speed,
     this.speedAccuracy,
+    this.bearing,
   });
 
   /// The latitude of this position in degrees normalized to the interval -90.0 to +90.0 (both inclusive).
@@ -46,6 +47,9 @@ class Position {
   ///
   /// The speedAccuracy is not available on all devices. In these cases the value is 0.0.
   final double speedAccuracy;
+
+  // return bearing
+  final double bearing;
 
   @override
   String toString() {
@@ -91,6 +95,8 @@ class Position {
         accuracy: positionMap['accuracy'] ?? 0.0,
         heading: positionMap['heading'] ?? 0.0,
         speed: positionMap['speed'] ?? 0.0,
-        speedAccuracy: positionMap['speed_accuracy'] ?? 0.0);
+        speedAccuracy: positionMap['speed_accuracy'] ?? 0.0,
+        bearing: positionMap['bearing'] ?? 0.0,
+      );
   }
 }

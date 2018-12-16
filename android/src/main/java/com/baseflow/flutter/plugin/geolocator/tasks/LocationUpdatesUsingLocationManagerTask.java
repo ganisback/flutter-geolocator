@@ -84,8 +84,8 @@ class LocationUpdatesUsingLocationManagerTask extends LocationUsingLocationManag
     private String getBestProvider(LocationManager locationManager, GeolocationAccuracy accuracy) {
         Criteria criteria = new Criteria();
 
-        criteria.setBearingRequired(false);
-        criteria.setAltitudeRequired(false);
+        criteria.setBearingRequired(true);
+        criteria.setAltitudeRequired(true);
         criteria.setSpeedRequired(false);
 
         switch(accuracy) {
@@ -170,7 +170,7 @@ class LocationUpdatesUsingLocationManagerTask extends LocationUsingLocationManag
             case LOWEST: case LOW: return 500;
             case MEDIUM: return 250;
             case HIGH: return 100;
-            case BEST: return 50;
+            case BEST: return 10;
             default: return 100;
         }
     }

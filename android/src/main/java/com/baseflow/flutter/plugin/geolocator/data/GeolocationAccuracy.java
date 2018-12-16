@@ -12,5 +12,5 @@ public enum GeolocationAccuracy {
     @SerializedName("high")
     HIGH,
     @SerializedName(value = "best", alternate = "bestForNavigation")
-    BEST
+    BEST,
 }
