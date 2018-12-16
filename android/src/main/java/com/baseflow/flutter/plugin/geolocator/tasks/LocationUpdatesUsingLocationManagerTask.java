@@ -110,7 +110,7 @@ class LocationUpdatesUsingLocationManagerTask extends LocationUsingLocationManag
                 criteria.setPowerRequirement(Criteria.POWER_HIGH);
                 break;
             case BEST:
-                criteria.setAccuracy(Criteria.ACCURACY_FINE);
+                criteria.setAccuracy(Criteria.ACCURACY_HIGH);
                 criteria.setHorizontalAccuracy(Criteria.ACCURACY_HIGH);
                 criteria.setPowerRequirement(Criteria.POWER_HIGH);
                 break;
@@ -170,7 +170,7 @@ class LocationUpdatesUsingLocationManagerTask extends LocationUsingLocationManag
             case LOWEST: case LOW: return 500;
             case MEDIUM: return 250;
             case HIGH: return 100;
-            case BEST: return 10;
+            case BEST: return 5;
             default: return 100;
         }
     }
